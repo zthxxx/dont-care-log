@@ -1,6 +1,6 @@
 {
   "name": "dont-care-log",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "make git stage ignore specific log code line",
   "main": "index.js",
   "repository": "zthxxx/dont-care-log",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/zthxxx/dont-care-log#readme",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=8.0.0"
   },
   "files": [
     "README.md",

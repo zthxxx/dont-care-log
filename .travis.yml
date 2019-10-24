@@ -1,0 +1,31 @@
+language: node_js
+
+node_js:
+  - 10
+
+cache:
+  npm: false
+
+git:
+  depth: false
+
+env:
+  ZSH=${HOME}/.oh-my-zsh
+
+before_install:
+  - mkdir -p node_modules/dont-care-log/
+  - cp -Rf ./src node_modules/dont-care-log/
+
+deploy:
+  - provider: npm
+    skip_cleanup: true
+    email: "${NPM_USER_EMAIL}"
+    api_key: "${NPM_AUTH_TOKEN}"
+    on:
+      branch: master
+      tags: true
+
+notifications:
+  email: true
+  on_success: always
+  on_failure: always
