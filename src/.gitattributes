@@ -1,0 +1,2 @@
+*.[jt]s filter=ignoreLogStage
+*.[jt]sx filter=ignoreLogStage
