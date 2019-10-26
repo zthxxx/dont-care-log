@@ -1,6 +1,6 @@
 {
   "name": "dont-care-log",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "teach git stage/diff how to ignore specific logging code",
   "main": "index.js",
   "repository": "zthxxx/dont-care-log",
