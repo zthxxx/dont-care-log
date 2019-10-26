@@ -21,7 +21,7 @@ showTitle(var)
 // WTF! --> output: 'bar' 
 ```
 
-guess what happened in `...`
+guess what happened in \`**...**\`
 
 ---
 
@@ -39,7 +39,7 @@ signale.js (more info, more color)
 
 ---
 
-## debugger
+## Breakpoint / debugger
 
 - not data persistence
 - break code workflow
@@ -83,6 +83,8 @@ console.log(foo)
 console.log(bar)
 console.log(name)
 ```
+
+lose your self in output
 
 ---
 
@@ -137,6 +139,69 @@ console.log('MarkdownEditor onChange name', name)
 
 ---
 
+<style>
+  .content code[class*="language-"] {
+    font-size: 2em;
+  }
+</style>
+
+## Hi, [dont care log](https://www.npmjs.com/package/dont-care-log)
+
+
+```bash
+$ npm i -D dont-care-log
+```
+
+---
+
+<style>
+.slide .content > .diff-code {
+  display: flex;
+  flex-direction: row;
+}
+.content > .diff-code > pre {
+  padding: 40px 0;
+  border-right: 1px solid #bbb;
+}
+.content > .diff-code > pre:last-of-type {
+  border-right: none;
+}
+.content > .diff-code code.language-diff {
+  color: #66b91a;
+}
+</style>
+
+<div class="diff-code">
+
+```js
+import path from 'path'
+
+const getFile = () => {
+  const name = 'foo'
+  const file = path.join(__dirname, name)
+  console.log('TCL: getFile() -> name:', file)
+  return file
+}
+```
+
+```diff
++ import path from 'path'
++ 
++ const getFile = () => {
++   const name = 'foo'
++   const file = path.join(__dirname, name)
++   return file
++ }
+```
+
+</div>
+
+**New file** as left, `git add/diff` as right
+
+No line of `console.log('TCL: ...)` in diff
+
+---
+
 
 **staging** <--- [ filters ] --> **workspace**
 
@@ -176,24 +241,9 @@ console.log('MarkdownEditor onChange name', name)
 
 ---
 
-<style>
-  .content code[class*="language-"] {
-    font-size: 2em;
-  }
-</style>
-
-## Hi, [dont care log](https://www.npmjs.com/package/dont-care-log)
-
-
-```bash
-$ npm i -D dont-care-log
-```
-
----
-
 ## Roadmap
 
 - [ ] multiline for per log functions
 - [ ] configurable
-- [ ] static parse current to find out all variables
-
+- [ ] static parse current line to find out all variables
+- [ ] log plugin of webstorm

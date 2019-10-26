@@ -1,6 +1,6 @@
 {
   "name": "dont-care-log",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "teach git stage/diff how to ignore specific logging code",
   "main": "index.js",
   "repository": "zthxxx/dont-care-log",
@@ -53,7 +53,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "eloc": "^1.1.12",
+    "eloc": "^1.1.13",
     "husky": "^3.0.9"
   }
 }
