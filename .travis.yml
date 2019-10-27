@@ -9,10 +9,13 @@ cache:
 git:
   depth: false
 
-
 before_install:
   - mkdir -p node_modules/dont-care-log/
   - cp -Rf ./src node_modules/dont-care-log/
+
+before_script:
+  - npm test
+  - npm run benchmark
 
 script:
   - npm run build
